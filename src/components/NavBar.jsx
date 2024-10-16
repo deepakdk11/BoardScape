@@ -1,15 +1,33 @@
 import React from "react";
+import { BiLogoSlack } from "react-icons/bi";
 
 const NavBar = () => {
   return (
-    <div className="flex justify-between items-center py-1 border-gray-300 bg-black/20">
-      <div>
-        <h1 className="text-xl text-white font-bold">BoardScape</h1>
+    <div className="flex items-center justify-between px-1 py-1 border-gray-300 bg-black/20">
+      <div className="flex items-center">
+        <BiLogoSlack size={25} className="mr-2 text-white" />
+        <h1 className="text-xl font-bold text-white">BoardScape</h1>
       </div>
-      <div className=" px-2 py-1 flex items-center">
-        <div className="flex items-center mr-2 w-52 border border-gray-400 px-1 py-1 rounded-md bg-white/10 ">
-        <svg width="20" height="20" viewBox="0 0 24 24" role="presentation" className="mr-2 text-white"><path fill="currentcolor" fillRule="evenodd" d="m16.436 15.085 3.94 4.01a1 1 0 0 1-1.425 1.402l-3.938-4.006a7.5 7.5 0 1 1 1.423-1.406M10.5 16a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11"></path></svg>
-        <input className="bg-transparent w-40 placeholder:text-white" type="text" placeholder="Search" />
+      <div className="flex items-center px-2 py-1 ">
+        <div className="items-center hidden px-1 py-1 mr-2 border border-gray-400 rounded-md lg:flex w-52 bg-white/10 ">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            role="presentation"
+            className="mr-2 text-white"
+          >
+            <path
+              fill="currentcolor"
+              fillRule="evenodd"
+              d="m16.436 15.085 3.94 4.01a1 1 0 0 1-1.425 1.402l-3.938-4.006a7.5 7.5 0 1 1 1.423-1.406M10.5 16a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11"
+            ></path>
+          </svg>
+          <input
+            className="w-40 bg-transparent placeholder:text-white"
+            type="text"
+            placeholder="Search"
+          />
         </div>
         <p className="mr-3 text-white">
           <svg width="24" height="24" viewBox="0 0 24 24" role="presentation">
@@ -20,7 +38,7 @@ const NavBar = () => {
             ></path>
           </svg>
         </p>
-        <p className="mr-3 text-white">
+        <p className="hidden mr-3 text-white lg:block">
           <svg
             width="24"
             height="24"
@@ -37,9 +55,7 @@ const NavBar = () => {
             ></path>
           </svg>
         </p>
-        <div className="bg-red-700 p-3 rounded-full">
-          
-        </div>
+        <div className="p-3 bg-red-700 rounded-full"></div>
       </div>
     </div>
   );
