@@ -6,7 +6,7 @@ const data = {
             cards:[
                 {
                     id: "1",
-                    cardName : "Data Types"
+                    title : "Data Types"
                 }
             ]
 
@@ -15,10 +15,10 @@ const data = {
             id:"list-2",
             title:"java",
             cards:[
-                {
-                    id: "1",
-                    cardName : "syntax"
-                }
+                // {
+                //     id: "1",
+                //     cardName : "syntax"
+                // }
             ]
 
         },
@@ -26,15 +26,15 @@ const data = {
             id:"list-3",
             title:"Node JS",
             cards:[
-                {
-                    id: "1",
-                    cardName : "Database"
-                }
+                // {
+                //     id: "1",
+                //     cardName : "Database"
+                // }
             ]
 
         },
     ],
-    listId : ["list-1", "list-2", "list-3"]
+    listIds : ["list-1", "list-2", "list-3"]
 }
 
 export default data;
