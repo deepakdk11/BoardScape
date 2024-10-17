@@ -17,6 +17,6 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const db = getFirestore();
-const timeStamp = serverTimestamp();
+const timestamp = serverTimestamp();
 
-export {app, db, timeStamp};
+export {app, db, timestamp};

@@ -2,6 +2,7 @@ import React from "react";
 import { Draggable, Droppable } from "react-beautiful-dnd";
 import InputContainer from "./InputContainer";
 import Cards from "./Cards";
+import Title from "./Title";
 
 const List = ({ list, index }) => {
   return (
@@ -9,7 +10,7 @@ const List = ({ list, index }) => {
       {(provided) => (
         <div {...provided.draggableProps} ref={provided.innerRef}>
           <div {...provided.dragHandleProps}>
-            <div>{/* title */}</div>
+            <Title title={list.title} listId={list.id} />
             <div>
               <Droppable droppableId={list.id} type="task">
                 {(provided) => (
