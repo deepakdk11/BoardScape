@@ -114,8 +114,6 @@ export const DataContextProvider = (props) => {
   const onDragEnd = async (result) => {
     const { destination, source, draggableId, type } = result;
 
-    console.log(destination, source, draggableId, type);
-
     if (!destination) {
       return;
     }
@@ -157,7 +155,6 @@ export const DataContextProvider = (props) => {
         (card) => card.id === draggableId
       )[0];
 
-      console.log(sourceList, destinationList);
       const sourceListRef = doc(db, "lists", source.droppableId);
 
       sourceList.cards.splice(source.index, 1);
@@ -207,9 +204,11 @@ export const DataContextProvider = (props) => {
     "bg-gradient-to-r from-slate-900 to-slate-700"
   ]
 
-  const ranNumber = Math.floor(Math.random() * colors.length)
-  const ranColor = colors[ranNumber]
-  
+  const [bgColor, setBgColor] = useState(colors[15]);
+
+  const changeBackgroundColor = (color) => {
+    setBgColor(color); 
+  };
 
   const contextValue = {
     addMoreCard,
@@ -221,8 +220,9 @@ export const DataContextProvider = (props) => {
     onDragEnd,
     lists,
     setLists,
-    ranColor,
-    colors
+    colors,
+    bgColor,
+    changeBackgroundColor
   };
 
   return (

@@ -2,8 +2,9 @@ import React, { useContext, useState } from "react";
 import { BiLogoSlack } from "react-icons/bi";
 import { DataContext } from "../context/DataContext";
 import Colors from "./Colors";
+import { IoMdColorPalette } from "react-icons/io";
 
-const NavBar = () => {
+const NavBar = ({bgColor}) => {
   const [show, setShow] = useState(false)
   const {ranColor} = useContext(DataContext)
   return (
@@ -59,7 +60,8 @@ const NavBar = () => {
             ></path>
           </svg>
         </p>
-        <div className={` ${ranColor} p-3 bg-red-700 rounded-full cursor-pointer`} onClick={()=>setShow(prev => !prev)}>
+        <div className="cursor-pointer" onClick={()=>setShow(prev => !prev)}>
+          <IoMdColorPalette  size={25} color="white"/>
           {show ? <Colors show={show} /> : <></>}
         </div>
       </div>

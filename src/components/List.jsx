@@ -9,7 +9,7 @@ const List = ({ list, index }) => {
     <Draggable draggableId={list.id} index={index}>
       {(provided) => (
         <div {...provided.draggableProps} ref={provided.innerRef} className="">
-          <div {...provided.dragHandleProps} className="mx-5 mt-3 rounded-xl p-2 border-2 w-64 bg-[color:var(--accent-background,#f1f2f4)]">
+          <div {...provided.dragHandleProps} className="md:mx-5 mt-3 rounded-xl p-2 border-2 md:w-64 w-full bg-[color:var(--accent-background,#f1f2f4)]">
             <Title title={list.title} listId={list.id} />
             <div>
               <Droppable droppableId={list.id} type="task">

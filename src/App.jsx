@@ -1,13 +1,13 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import NavBar from './components/NavBar'
 import Home from './components/Home'
 import { DataContext } from './context/DataContext'
 
 const App = () => {
-  const {ranColor} = useContext(DataContext) //className={`${ranColor} bg-no-repeat bg-cover`}
-  
+  const {bgColor} = useContext(DataContext)
+
   return (
-    <div>
+    <div className={`${bgColor} bg-no-repeat bg-cover`}>
       <NavBar />
       <Home />
     </div>

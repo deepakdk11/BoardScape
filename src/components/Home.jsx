@@ -15,7 +15,7 @@ const {onDragEnd, lists} = useContext(DataContext);
                 {
                     (provided) => (
                         <div
-                        className='flex h-screen scroll-smooth overflow-y-hidden overflow-x-scroll'
+                        className='flex p-4 md:p-0 md:flex-row flex-col h-screen scroll-smooth overflow-y-hidden overflow-x-scroll'
                         ref={provided.innerRef}
                         {...provided.droppableProps}
                         >
