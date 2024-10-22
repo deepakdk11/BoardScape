@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import { BiLogoSlack } from "react-icons/bi";
+import { DataContext } from "../context/DataContext";
+import Colors from "./Colors";
 
 const NavBar = () => {
+  const [show, setShow] = useState(false)
+  const {ranColor} = useContext(DataContext)
   return (
     <div className="flex items-center justify-between px-1 py-1 border-gray-300 bg-black/20">
       <div className="flex items-center">
@@ -24,7 +28,7 @@ const NavBar = () => {
             ></path>
           </svg>
           <input
-            className="w-40 bg-transparent placeholder:text-white"
+            className="w-40 bg-transparent placeholder:text-white focus:outline-none"
             type="text"
             placeholder="Search"
           />
@@ -55,7 +59,9 @@ const NavBar = () => {
             ></path>
           </svg>
         </p>
-        <div className="p-3 bg-red-700 rounded-full"></div>
+        <div className={` ${ranColor} p-3 bg-red-700 rounded-full cursor-pointer`} onClick={()=>setShow(prev => !prev)}>
+          {show ? <Colors show={show} /> : <></>}
+        </div>
       </div>
     </div>
   );

@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 
+
+
 body {
-    @apply h-screen bg-[linear-gradient(to_bottom,#0066ff,#007bff,#008dfd,#009cf5,#12a9eb)] bg-no-repeat bg-cover;
+    @apply  font-Outfit not-italic ;
+    font-family: "Roboto", sans-serif;
   }

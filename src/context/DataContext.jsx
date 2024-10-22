@@ -174,6 +174,43 @@ export const DataContextProvider = (props) => {
     }
   };
 
+  const colors = [
+    "bg-gradient-to-r from-red-500 to-orange-500",
+    "bg-gradient-to-r from-rose-400 to-red-500",
+    "bg-gradient-to-r from-pink-500 to-rose-500",
+    "bg-gradient-to-r from-amber-200 to-yellow-400",
+    "bg-gradient-to-r from-amber-200 to-yellow-500",
+    "bg-gradient-to-r from-amber-500 to-pink-500",
+    "bg-gradient-to-r from-violet-200 to-pink-200",
+    "bg-gradient-to-r from-blue-200 to-cyan-200",
+    "bg-gradient-to-r from-teal-200 to-teal-500",
+    "bg-gradient-to-r from-lime-400 to-lime-500",
+    "bg-gradient-to-r from-teal-400 to-yellow-200",
+    "bg-gradient-to-r from-emerald-400 to-cyan-400",
+    "bg-gradient-to-r from-indigo-400 to-cyan-400",
+    "bg-gradient-to-r from-cyan-500 to-blue-500",
+    "bg-gradient-to-r from-indigo-500 to-blue-500",
+    "bg-gradient-to-r from-blue-600 to-violet-600",
+    "bg-gradient-to-r from-fuchsia-500 to-cyan-500",
+    "bg-gradient-to-r from-fuchsia-600 to-pink-600",
+    "bg-gradient-to-r from-fuchsia-600 to-purple-600",
+    "bg-gradient-to-r from-fuchsia-500 to-pink-500",
+    "bg-gradient-to-r from-violet-500 to-purple-500",
+    "bg-gradient-to-r from-violet-600 to-indigo-600",
+    "bg-gradient-to-r from-purple-500 to-purple-900",
+    "bg-gradient-to-r from-blue-800 to-indigo-900",
+    "bg-gradient-to-r from-neutral-300 to-stone-400",
+    "bg-gradient-to-r from-stone-500 to-stone-700",
+    "bg-gradient-to-r from-slate-300 to-slate-500",
+    "bg-gradient-to-r from-emerald-500 to-emerald-900",
+    "bg-gradient-to-r from-slate-500 to-slate-800",
+    "bg-gradient-to-r from-slate-900 to-slate-700"
+  ]
+
+  const ranNumber = Math.floor(Math.random() * colors.length)
+  const ranColor = colors[ranNumber]
+  
+
   const contextValue = {
     addMoreCard,
     addMoreList,
@@ -184,6 +221,8 @@ export const DataContextProvider = (props) => {
     onDragEnd,
     lists,
     setLists,
+    ranColor,
+    colors
   };
 
   return (

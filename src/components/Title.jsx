@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react'
 import ClickOutComponent from 'react-onclickout'
 import { DataContext } from '../context/DataContext'
+import { HiOutlineDotsHorizontal } from "react-icons/hi";
 
 const Title = ({title, listId}) => {
     const [ show, setShow ] = useState(false)
@@ -32,17 +33,17 @@ const Title = ({title, listId}) => {
                 />
             </div>
         ) : (
-            <div>
+            <div className='flex justify-between relative text-base font-semibold text-slate-500 px-2'>
                 <h1 onClick={() => setShow(prev => !prev)}>{title}</h1>
-                <button onClick={()=>setOption(prev => !prev)}>X</button>
+                <button onClick={()=>setOption(prev => !prev)}><HiOutlineDotsHorizontal /></button>
                 {
                     option && (
                         <ClickOutComponent onClickOut={(e) => {
                             setOption(prev => !prev)
                         }}>
-                            <ul>
-                                <li onClick={() => {setOption(!option); deleteList(listId)}}>Delete List</li>
-                                <li onClick={() => {setOption(!option); setShow(!show)}}>Edit Card Title</li>
+                            <ul className='absolute top-5 left-28 py-1 px-2 bg-gray-100 rounded-md text-sm text-black z-10'>
+                                <li className='cursor-pointer hover:bg-black/5 p-1 rounded  mb-1' onClick={() => {setOption(!option); deleteList(listId)}}>Delete List</li>
+                                <li className='cursor-pointer hover:bg-black/5 p-1 rounded' onClick={() => {setOption(!option); setShow(!show)}}>Edit Card Title</li>
                             </ul>
                         </ClickOutComponent>
                     )

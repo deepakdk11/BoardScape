@@ -1,12 +1,12 @@
-import React, { useContext }  from 'react'
-import { DragDropContext, Droppable } from 'react-beautiful-dnd'
-import List from './List' 
-import InputContainer from './InputContainer'
-import { DataContext } from '../context/DataContext'
+import React, { useContext }  from 'react';
+import { DragDropContext, Droppable } from 'react-beautiful-dnd';
+import List from './List';
+import InputContainer from './InputContainer';
+import { DataContext } from '../context/DataContext';
 
 const Home = () => {
 
-const {onDragEnd, lists} = useContext(DataContext)
+const {onDragEnd, lists} = useContext(DataContext);
 
   return (
     <>
@@ -15,7 +15,7 @@ const {onDragEnd, lists} = useContext(DataContext)
                 {
                     (provided) => (
                         <div
-                        className='border-2 flex'
+                        className='flex h-screen scroll-smooth overflow-y-hidden overflow-x-scroll'
                         ref={provided.innerRef}
                         {...provided.droppableProps}
                         >
