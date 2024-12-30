@@ -66,9 +66,8 @@ To run this project locally, follow these steps:
 
 *   `context/`: Context API for state management.
 *   `firebase/`: Firebase configuration and helper functions.
-*   `styles/`: CSS files for styling.
-*   `App.js`: Main application component.
-*   `index.js`: Entry point for the React application.
+*   `App.jsx`: Main application component.
+*   `main.jsx`: Entry point for the React application.
 
 **How to Use**
 
