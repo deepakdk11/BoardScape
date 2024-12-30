@@ -4,7 +4,7 @@ Boardscapee is a Trello-inspired task management tool that allows users to organ
 
 **Live Demo**
 
-Check out the live version of the app: [Boardscapee](Boardscapee)
+Check out the live version of the app: [Boardscapee](https://boardscapee.web.app/)
 
 ![Boardscapee)](https://github.com/user-attachments/assets/c5309bad-a0d2-4e6e-82aa-7cc3bdf54b72)
 
